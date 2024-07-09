@@ -22,6 +22,7 @@ import {
 import Loader from './Loader';
 import EndCallButton from './EndCallButton';
 import { cn } from '@/lib/utils';
+import StreamVideoProvider from '@/providers/StreamClientProvider';
 
 type CallLayoutType = 'grid' | 'speaker-left' | 'speaker-right';
 
@@ -100,4 +101,10 @@ const MeetingRoom = () => {
   );
 };
 
-export default MeetingRoom;
+export default function MeetingRoomWithProvider() {
+  return (
+    <StreamVideoProvider>
+      <MeetingRoom />
+    </StreamVideoProvider>
+  );
+}
