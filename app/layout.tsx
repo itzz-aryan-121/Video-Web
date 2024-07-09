@@ -43,10 +43,7 @@ export default function RootLayout({
 
           {children}
           </main>
-          <footer style={{ textAlign: 'center', padding: '20px', backgroundColor: '#252a41', color: '#fff' }}>
-            Made with 💙 by Aryan 
-            <p>&copy; {new Date().getFullYear()} BOOM</p>
-          </footer>
+         
           <Toaster />
         </body>
       </ClerkProvider>
